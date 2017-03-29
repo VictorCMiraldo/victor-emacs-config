@@ -27,9 +27,11 @@
 (add-to-list 'load-path "~/.emacs.d/manual/evil-1.2.12")
 (add-to-list 'load-path "~/.emacs.d/manual/goto-chg-1.6")
 (add-to-list 'load-path "~/.emacs.d/manual/powerline-2.4")
+(add-to-list 'load-path "~/.emacs.d/manual/linum-relative-0.5")
 
 (require 'goto-chg)
 (require 'powerline)
+(require 'linum-relative)
 (require 'evil)
 
 ;; Evil mode with powerline
@@ -44,10 +46,6 @@
 ;; * Auto Complete
 ;;
 (ac-config-default)
-
-;; * Line numbers
-;;
-(global-linum-mode t)
 
 ;; * Neotree
 ;;
