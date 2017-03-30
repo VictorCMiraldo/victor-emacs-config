@@ -9,6 +9,7 @@
    (quote
     ("7a4efa993973000e5872099a3c24c310b8bb2568b70f3b9d53675e6edf1f3ce4" default)))
  '(custom-theme-directory "~/.emacs.d/themes/")
+ '(evil-auto-indent nil)
  '(global-linum-mode t)
  '(haskell-interactive-popup-errors nil)
  '(haskell-literate-default (quote tex))

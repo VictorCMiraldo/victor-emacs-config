@@ -38,6 +38,11 @@
 (evil-mode 1)
 (powerline-evil-theme)
 
+;; swaps ':' with ';'
+(with-eval-after-load 'evil-maps
+  (define-key evil-motion-state-map (kbd ":") 'evil-repeat-find-char)
+  (define-key evil-motion-state-map (kbd ";") 'evil-ex))
+
 ;; * File Extensions
 ;;
 (add-to-list 'auto-mode-alist '("\\.hs$" . haskell-mode))
