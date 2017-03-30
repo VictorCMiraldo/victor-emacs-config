@@ -43,6 +43,25 @@
   (define-key evil-motion-state-map (kbd ":") 'evil-repeat-find-char)
   (define-key evil-motion-state-map (kbd ";") 'evil-ex))
 
+;; Exits insert mode by pressing jj
+(defun my-jj ()
+  (interactive)
+  (let* ((initial-key ?j)
+         (final-key ?j)
+         (timeout 0.4)
+         (event (read-event nil nil timeout)))
+    (if event
+        ;; timeout met
+        (if (and (characterp event) (= event final-key))
+            (evil-normal-state)
+          (insert initial-key)
+          (push event unread-command-events))
+      ;; timeout exceeded
+      (insert initial-key))))
+
+(define-key evil-insert-state-map (kbd "j") 'my-jj)
+
+
 ;; * File Extensions
 ;;
 (add-to-list 'auto-mode-alist '("\\.hs$" . haskell-mode))
