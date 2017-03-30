@@ -28,20 +28,30 @@
 (add-to-list 'load-path "~/.emacs.d/manual/goto-chg-1.6")
 (add-to-list 'load-path "~/.emacs.d/manual/powerline-2.4")
 (add-to-list 'load-path "~/.emacs.d/manual/linum-relative-0.5")
+(add-to-list 'load-path "~/.emacs.d/manual/evil-snipe-2.0.6")
+(add-to-list 'load-path "~/.emacs.d/manual/evil-surround-0.1")
 
 (require 'goto-chg)
 (require 'powerline)
 (require 'linum-relative)
 (require 'evil)
+(require 'evil-snipe)
+(require 'evil-surround)
 
 ;; Evil mode with powerline
 (evil-mode 1)
 (powerline-evil-theme)
+(evil-snipe-override-mode 1)
+(global-evil-surround-mode 1)
+
+;; Make sniping easy by making [ and ] match all open-close-goodies.
+(push '(?\[ "[[{(]") evil-snipe-aliases)
+(push '(?\] "[]})]") evil-snipe-aliases)
 
 ;; swaps ':' with ';'
-(with-eval-after-load 'evil-maps
-  (define-key evil-motion-state-map (kbd ":") 'evil-repeat-find-char)
-  (define-key evil-motion-state-map (kbd ";") 'evil-ex))
+;; (with-eval-after-load 'evil-maps
+;;   (define-key evil-motion-state-map (kbd ":") 'evil-repeat-find-char)
+;;   (define-key evil-motion-state-map (kbd ";") 'evil-ex))
 
 ;; Exits insert mode by pressing jj
 (defun my-jj ()
