@@ -5,6 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(agda2-fontset-name "DejaVu Sans Mono 10")
  '(agda2-program-name "agda")
+ '(column-number-mode t)
  '(custom-safe-themes
    (quote
     ("7a4efa993973000e5872099a3c24c310b8bb2568b70f3b9d53675e6edf1f3ce4" default)))
@@ -61,5 +62,7 @@
  '(agda2-highlight-typechecks-face ((t (:background "light blue" :foreground "black"))))
  '(agda2-highlight-unsolved-constraint-face ((t (:background "yellow" :foreground "black"))))
  '(agda2-highlight-unsolved-meta-face ((t (:background "yellow" :foreground "black"))))
- '(font-latex-sectioning-5-face ((t (:inherit variable-pitch :foreground "SteelBlue1" :weight bold)))))
+ '(font-latex-sectioning-5-face ((t (:inherit variable-pitch :foreground "SteelBlue1" :weight bold))))
+ '(powerline-active2 ((t (:inherit mode-line :background "gray30" :foreground "white"))))
+ '(powerline-active3 ((t (:inherit mode-line :background "gray40" :foreground "white")))))
 
