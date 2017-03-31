@@ -22,6 +22,7 @@
  '(haskell-process-type (quote cabal-repl))
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
+ '(linum-relative-current-symbol "")
  '(linum-relative-global-mode t)
  '(neo-hidden-regexp-list
    (quote
