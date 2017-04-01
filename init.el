@@ -30,6 +30,7 @@
 (add-to-list 'load-path "~/.emacs.d/manual/linum-relative-0.5")
 (add-to-list 'load-path "~/.emacs.d/manual/evil-snipe-2.0.6")
 (add-to-list 'load-path "~/.emacs.d/manual/evil-surround-0.1")
+(add-to-list 'load-path "~/.emacs.d/manual/mybuffers")
 
 (require 'goto-chg)
 (require 'powerline)
@@ -85,6 +86,9 @@
 ;;
 (global-set-key [f9] 'neotree-toggle)
 
+;; Buffer Cycling Magic
+(require 'mybuffers)
+(global-set-key (kbd "<C-tab>") 'mybuffers-switch)
 
 ;; * Indentation
 ;;
