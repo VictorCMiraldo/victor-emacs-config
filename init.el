@@ -35,15 +35,15 @@
 (require 'powerline)
 (require 'linum-relative)
 (require 'evil)
-(require 'evil-snipe)
 (require 'evil-surround)
+(require 'evil-snipe)
 
 ;; Evil mode with powerline
 (evil-mode 1)
 (powerline-evil-theme)
-(evil-snipe-override-mode 1)
 (global-evil-surround-mode 1)
-
+(evil-snipe-override-mode 1)
+ 
 ;; Make sniping easy by making [ and ] match all open-close-goodies.
 (push '(?\[ "[[{(]") evil-snipe-aliases)
 (push '(?\] "[]})]") evil-snipe-aliases)
@@ -151,6 +151,14 @@
 ;; and custom-set-faces.
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
+
+;; Set up a larger font at my home machine. I don't have a 24 inch
+;; monitor at home yet... :(
+(when (string= system-name "logos")
+  (set-face-attribute 'default nil
+                      :height
+                      (+ (face-attribute 'default :height)
+                         10)))
 
 ;; * Visuals
 ;;
