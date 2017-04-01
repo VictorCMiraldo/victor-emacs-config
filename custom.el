@@ -3,6 +3,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ac-auto-start nil)
+ '(ac-trigger-key "TAB")
  '(agda2-fontset-name "DejaVu Sans Mono 10")
  '(agda2-program-name "agda")
  '(column-number-mode t)
@@ -32,7 +34,7 @@
     (("gnu" . "http://elpa.gnu.org/packages/")
      ("melpa-stable" . "http://stable.melpa.org/packages/"))))
  '(standard-indent 2)
- '(tab-always-indent (quote complete))
+ '(tab-always-indent t)
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
