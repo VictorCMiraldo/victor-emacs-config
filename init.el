@@ -89,14 +89,6 @@
 ;; Buffer Cycling Magic
 (require 'mybuffers)
 (global-set-key (kbd "<C-tab>") 'mybuffers-switch)
-(defun swbuff-switch-to-previous-buffer ()
-  (interactive)
-  (previous-buffer)
-)
-(defun swbuff-switch-to-next-buffer ()
-  (interactive)
-  (next-buffer)
-)
 
 ;; * Indentation
 ;;
