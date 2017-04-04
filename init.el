@@ -97,13 +97,20 @@
 ;;   after pressing enter.
 (when (fboundp 'electric-indent-mode) (electric-indent-mode -1))
 
+(defun haskell-process-kill ()
+  "Kill haskell process. Very usefull when it starts leaking"
+  (interactive)
+  (kill-process (haskell-process-process (haskell-commands-process))))
+
 ;; * haskell-mode commands
 ;; 
 ;; Some haskell-mode functionality keybindings.
 ;;
 (eval-after-load 'haskell-mode '(progn
   (define-key haskell-mode-map (kbd "C-c C-l") 
-      'haskell-process-load-or-reload)
+      'haskell-process-load-file)
+  ; (define-key haskell-mode-map (kbd "C-c C-k") 
+  ;    'haskell-process-kill)
   (define-key haskell-mode-map (kbd "C-c C-z") 
       'haskell-interactive-switch)
   (define-key haskell-mode-map (kbd "C-c C-n C-t") 
@@ -118,7 +125,7 @@
   (define-key haskell-cabal-mode-map (kbd "C-c C-z") 
       'haskell-interactive-switch)
   (define-key haskell-cabal-mode-map (kbd "C-c C-k") 
-      'haskell-interactive-mode-clear)
+      'haskell-process-kill)
   (define-key haskell-cabal-mode-map (kbd "C-c C-c") 
       'haskell-process-cabal-build)
   (define-key haskell-cabal-mode-map (kbd "C-c c") 
