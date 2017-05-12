@@ -4,6 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ac-auto-start nil)
+ '(ac-delay 0.4)
  '(ac-trigger-key "TAB")
  '(agda2-fontset-name "DejaVu Sans Mono 10")
  '(agda2-program-name "agda")
