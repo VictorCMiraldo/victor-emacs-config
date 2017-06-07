@@ -163,13 +163,6 @@
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 
-;; Set up a larger font at my home machine. I don't have a 24 inch
-;; monitor at home yet... :(
-(when (string= system-name "logos")
-  (set-face-attribute 'default nil
-                      :height
-                      (+ (face-attribute 'default :height)
-                         10)))
 
 ;; * Visuals
 ;;
@@ -182,3 +175,15 @@
 (load "~/.emacs.d/victor/agda-tag.el")
 (load "~/.emacs.d/victor/emacs-func.el")
 
+
+;; Set up a larger font at my home machine. I don't have a 24 inch
+;; monitor at home yet... :(
+(defun my-inc-fontsize ()
+  (set-face-attribute 'default nil
+                      :height
+                      (+ (face-attribute 'default :height)
+                         10)))
+
+(when (string= system-name "logos")
+  (progn (message "%s" "Setting larger font for logos")
+         (my-inc-fontsize)))
