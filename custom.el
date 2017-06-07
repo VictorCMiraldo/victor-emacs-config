@@ -6,7 +6,7 @@
  '(ac-auto-start nil)
  '(ac-delay 0.4)
  '(ac-trigger-key "TAB")
- '(agda2-fontset-name "DejaVu Sans Mono 10")
+ '(agda2-fontset-name "DejaVu Sans Mono 11")
  '(agda2-program-name "agda")
  '(column-number-mode t)
  '(custom-safe-themes
