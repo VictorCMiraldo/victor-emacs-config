@@ -54,11 +54,11 @@
 ;;   (define-key evil-motion-state-map (kbd ":") 'evil-repeat-find-char)
 ;;   (define-key evil-motion-state-map (kbd ";") 'evil-ex))
 
-;; Exits insert mode by pressing jj
-(defun my-jj ()
+;; Exits insert mode by pressing jk
+(defun my-jk ()
   (interactive)
   (let* ((initial-key ?j)
-         (final-key ?j)
+         (final-key ?k)
          (timeout 0.4)
          (event (read-event nil nil timeout)))
     (if event
@@ -70,7 +70,7 @@
       ;; timeout exceeded
       (insert initial-key))))
 
-(define-key evil-insert-state-map (kbd "j") 'my-jj)
+(define-key evil-insert-state-map (kbd "j") 'my-jk)
 
 
 ;; * File Extensions
