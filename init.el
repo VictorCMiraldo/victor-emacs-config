@@ -131,6 +131,13 @@
   (define-key haskell-cabal-mode-map (kbd "C-c c") 
       'haskell-process-cabal)))
 
+;; Fix agda2-mode shortcuts
+(eval-after-load 'agda2-mode '(progn
+  (define-key agda2-mode-map (kbd "M-@")
+    'agda2-goto-definition-keyboard)
+  (define-key evil-normal-state-map [mouse-2]
+    'agda2-goto-definition-mouse)))
+
 ;; ** Configuring Latex-mode inside Literate Haskell mode
 ;;
 
