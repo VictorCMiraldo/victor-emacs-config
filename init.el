@@ -55,23 +55,25 @@
 ;;   (define-key evil-motion-state-map (kbd ";") 'evil-ex))
 
 ;; Exits insert mode by pressing jk
-(defun my-jk ()
+;;
+;; from https://stackoverflow.com/questions/10569165/how-to-map-jj-to-esc-in-emacs-evil-mode/10678483#10678483
+(evil-define-command cofi/maybe-exit ()
+  :repeat change
   (interactive)
-  (let* ((initial-key ?j)
-         (final-key ?k)
-         (timeout 0.4)
-         (event (read-event nil nil timeout)))
-    (if event
-        ;; timeout met
-        (if (and (characterp event) (= event final-key))
-            (evil-normal-state)
-          (insert initial-key)
-          (push event unread-command-events))
-      ;; timeout exceeded
-      (insert initial-key))))
+  (let ((modified (buffer-modified-p)))
+    (insert "j")
+    (let ((evt (read-event (format "Insert %c to exit insert state" ?k)
+               nil 0.5)))
+      (cond
+       ((null evt) (message ""))
+       ((and (integerp evt) (char-equal evt ?k))
+    (delete-char -1)
+    (set-buffer-modified-p modified)
+    (push 'escape unread-command-events))
+       (t (setq unread-command-events (append unread-command-events
+                          (list evt))))))))
 
-(define-key evil-insert-state-map (kbd "j") 'my-jk)
-
+(define-key evil-insert-state-map (kbd "j") 'cofi/maybe-exit)
 
 ;; * File Extensions
 ;;
