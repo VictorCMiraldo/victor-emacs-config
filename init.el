@@ -80,6 +80,9 @@
 ;; * Emacs Parens
 (show-paren-mode 1)
 
+;; * Emacs align
+(global-set-key (kbd "C-a") 'align-regexp)
+
 ;; * Auto Complete
 ;;
 (ac-config-default)
