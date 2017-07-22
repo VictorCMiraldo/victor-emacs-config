@@ -54,7 +54,7 @@
  '(agda2-highlight-inductive-constructor-face ((t (:foreground "SpringGreen3"))))
  '(agda2-highlight-keyword-face ((t (:foreground "brown1"))))
  '(agda2-highlight-macro-face ((t (:foreground "aquamarine4"))))
- '(agda2-highlight-module-face ((t (:foreground "slate purple"))))
+ '(agda2-highlight-module-face ((t (:foreground "gainsboro"))))
  '(agda2-highlight-number-face ((t (:foreground "medium purple"))))
  '(agda2-highlight-operator-face ((t (:foreground "gray75"))))
  '(agda2-highlight-postulate-face ((t (:foreground "SteelBlue2"))))
