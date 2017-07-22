@@ -20,7 +20,8 @@
 (add-to-list 'load-path "~/.emacs.d/manual/persistent-soft")
 
 ;; Packages required by us are:
-(require 'org)
+;; (require 'org)
+;; (require 'org-loaddefs) ;; required by emacs 24.3
 (require 'neotree)
 (require 'auto-complete)
 (require 'goto-chg)
@@ -71,10 +72,10 @@
 ;; ** Evil Map changes
 ;;
 ;; use '[' and ']' to jump between paragraphs.
-(with-eval-after-load 'evil-maps
+(eval-after-load 'evil-maps '(progn
   (define-key evil-motion-state-map (kbd "[") 'evil-backward-paragraph)
   (define-key evil-motion-state-map (kbd "]") 'evil-forward-paragraph)
-)
+))
 
 ;; * Emacs Parens
 (show-paren-mode 1)
@@ -122,12 +123,12 @@
 ;; Loads some libraries under victor/ subfolder.
 ;;
 (mapc (lambda (x) 
-         (load (expand-file-name (concat ".emacs.d/local/" x))))
+         (load (expand-file-name (concat "local/" x))))
   (list
     "emacs-func.el"
     "latex.el"
     "haskell.el"
-    "agda.el"
+    ;; "agda.el" ;; I Have no agda on this machine
   ))
 
 ;; Set up a larger font at my home machine. I don't have a 24 inch

@@ -30,7 +30,7 @@
 ;; 
 ;; Some haskell-mode functionality keybindings.
 ;;
-(with-eval-after-load 'haskell-mode
+(eval-after-load 'haskell-mode '(progn
   (define-key haskell-mode-map (kbd "<f8>")
       'haskell-navigate-imports)
   (define-key haskell-mode-map (kbd "C-c M-e")
@@ -54,18 +54,18 @@
   (define-key haskell-mode-map (kbd "C-c C-n C-c") 
       'haskell-process-cabal-build)
   (define-key haskell-mode-map (kbd "C-c C-n c") 
-      'haskell-process-cabal))
+      'haskell-process-cabal)))
 
-(with-eval-after-load 'haskell-interactive-mode
+(eval-after-load 'haskell-interactive-mode '(progn
   (define-key haskell-interactive-mode-map (kbd "C-c k !")
       'haskell-process-kill)
-)
+))
 
-(with-eval-after-load 'haskell-cabal
+(eval-after-load 'haskell-cabal '(progn
   (define-key haskell-cabal-mode-map (kbd "C-c C-z") 
       'haskell-interactive-switch)
   (define-key haskell-cabal-mode-map (kbd "C-c C-c") 
       'haskell-process-cabal-build)
   (define-key haskell-cabal-mode-map (kbd "C-c c") 
-      'haskell-process-cabal))
+      'haskell-process-cabal)))
 
