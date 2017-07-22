@@ -1,3 +1,6 @@
 [submodule "manual/powerline-2.4"]
 	path = manual/powerline-2.4
 	url = git@github.com:VictorCMiraldo/powerline.git
+[submodule "manual/column-enforce-mode"]
+	path = manual/column-enforce-mode
+	url = https://github.com/jordonbiondo/column-enforce-mode
