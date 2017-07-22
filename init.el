@@ -76,12 +76,13 @@
   (define-key evil-motion-state-map (kbd "]") 'evil-forward-paragraph)
 )
 
-
 ;; * Emacs Parens
 (show-paren-mode 1)
 
 ;; * Emacs align
 (global-set-key (kbd "C-a") 'align-regexp)
+
+;; TODO: add some evil operator for aligning code on visual mode.
 
 ;; * Auto Complete
 ;;
