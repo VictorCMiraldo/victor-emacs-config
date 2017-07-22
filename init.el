@@ -68,6 +68,18 @@
 (push '(?\[ "[[{(]") evil-snipe-aliases)
 (push '(?\] "[]})]") evil-snipe-aliases)
 
+;; ** Evil Map changes
+;;
+;; use '[' and ']' to jump between paragraphs.
+(with-eval-after-load 'evil-maps
+  (define-key evil-motion-state-map (kbd "[") 'evil-backward-paragraph)
+  (define-key evil-motion-state-map (kbd "]") 'evil-forward-paragraph)
+)
+
+
+;; * Emacs Parens
+(show-paren-mode 1)
+
 ;; * Auto Complete
 ;;
 (ac-config-default)
