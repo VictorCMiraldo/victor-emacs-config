@@ -20,7 +20,7 @@
 (add-to-list 'load-path "~/.emacs.d/manual/persistent-soft")
 
 ;; Packages required by us are:
-;; (require 'org)
+(require 'org)
 ;; (require 'org-loaddefs) ;; required by emacs 24.3
 (require 'neotree)
 (require 'auto-complete)
@@ -123,7 +123,7 @@
 ;; Loads some libraries under victor/ subfolder.
 ;;
 (mapc (lambda (x) 
-         (load (expand-file-name (concat "local/" x))))
+         (load (expand-file-name (concat ".emacs.d/local/" x))))
   (list
     "emacs-func.el"
     "latex.el"
