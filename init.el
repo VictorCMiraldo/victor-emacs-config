@@ -17,6 +17,7 @@
 (add-to-list 'load-path "~/.emacs.d/manual/evil-surround-0.1")
 (add-to-list 'load-path "~/.emacs.d/manual/mybuffers")
 (add-to-list 'load-path "~/.emacs.d/manual/column-enforce-mode")
+(add-to-list 'load-path "~/.emacs.d/manual/persistent-soft")
 
 ;; Packages required by us are:
 (require 'org)
@@ -30,6 +31,7 @@
 (require 'evil-snipe)
 (require 'mybuffers)
 (require 'column-enforce-mode)
+(require 'persistent-soft)
 
 ;; Evil mode with powerline
 (evil-mode 1)

@@ -6,6 +6,9 @@
 ;; makes sure emacs knows what are haskell files
 (add-to-list 'auto-mode-alist '("\\.hs$" . haskell-mode))
 
+;; makes sure that evil starts interactive-haskell in normal mode
+(add-to-list 'evil-insert-state-modes 'interactive-haskell-mode)
+
 ;; * haskell-mode commands
 
 (defun haskell-process-kill ()

@@ -4,3 +4,6 @@
 [submodule "manual/column-enforce-mode"]
 	path = manual/column-enforce-mode
 	url = https://github.com/jordonbiondo/column-enforce-mode
+[submodule "manual/persistent-soft"]
+	path = manual/persistent-soft
+	url = https://github.com/rolandwalker/persistent-soft
