@@ -9,17 +9,22 @@
  '(agda2-fontset-name "DejaVu Sans Mono 11")
  '(agda2-program-name "agda")
  '(column-number-mode t)
- '(custom-safe-themes (quote ("4528fb576178303ee89888e8126449341d463001cb38abe0015541eb798d8a23" "7a4efa993973000e5872099a3c24c310b8bb2568b70f3b9d53675e6edf1f3ce4" default)))
+ '(custom-safe-themes
+   (quote
+    ("4528fb576178303ee89888e8126449341d463001cb38abe0015541eb798d8a23" "7a4efa993973000e5872099a3c24c310b8bb2568b70f3b9d53675e6edf1f3ce4" default)))
  '(custom-theme-directory "~/.emacs.d/themes/")
  '(evil-auto-indent nil)
  '(evil-shift-width 1)
  '(evil-snipe-scope (quote visible))
+ '(global-column-enforce-mode t)
  '(global-linum-mode t)
  '(haskell-interactive-popup-errors nil)
  '(haskell-literate-default (quote tex))
  '(haskell-process-args-cabal-repl (quote ("--ghc-option='-ferror-spans +RTS -M12G -RTS'")))
  '(haskell-process-args-ghci (quote ("+RTS -M12G -RTS")))
- '(haskell-process-args-stack-ghci (quote ("--ghci-options=-ferror-spans +RTS -M12G -RTS" "--allow-different-user")))
+ '(haskell-process-args-stack-ghci
+   (quote
+    ("--ghci-options=-ferror-spans +RTS -M12G -RTS" "--allow-different-user")))
  '(haskell-process-auto-import-loaded-modules t)
  '(haskell-process-log t)
  '(haskell-process-path-cabal "/usr/local/bin/cabal")
@@ -30,9 +35,29 @@
  '(inhibit-startup-screen t)
  '(linum-relative-current-symbol "")
  '(linum-relative-global-mode t)
- '(neo-hidden-regexp-list (quote ("^\\." "\\.pyc$" "~$" "^#.*#$" "\\.elc$" "\\.agdai")))
- '(org-latex-default-packages-alist (quote (("AUTO" "inputenc" t ("pdflatex")) ("T1" "fontenc" t ("pdflatex")) ("" "graphicx" t) ("" "grffile" t) ("" "longtable" nil) ("" "wrapfig" nil) ("" "rotating" nil) ("normalem" "ulem" t) ("" "amsmath" t) ("" "textcomp" t) ("" "amssymb" t) ("" "hyperref" nil))))
- '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("melpa-stable" . "http://stable.melpa.org/packages/"))))
+ '(neo-hidden-regexp-list
+   (quote
+    ("^\\." "\\.pyc$" "~$" "^#.*#$" "\\.elc$" "\\.agdai")))
+ '(org-latex-default-packages-alist
+   (quote
+    (("AUTO" "inputenc" t
+      ("pdflatex"))
+     ("T1" "fontenc" t
+      ("pdflatex"))
+     ("" "graphicx" t)
+     ("" "grffile" t)
+     ("" "longtable" nil)
+     ("" "wrapfig" nil)
+     ("" "rotating" nil)
+     ("normalem" "ulem" t)
+     ("" "amsmath" t)
+     ("" "textcomp" t)
+     ("" "amssymb" t)
+     ("" "hyperref" nil))))
+ '(package-archives
+   (quote
+    (("gnu" . "http://elpa.gnu.org/packages/")
+     ("melpa-stable" . "http://stable.melpa.org/packages/"))))
  '(standard-indent 2)
  '(tab-always-indent t)
  '(tool-bar-mode nil))
@@ -41,30 +66,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- ;; '(agda2-highlight-bound-variable-face ((t (:foreground "gray75"))) t)
- ;; '(agda2-highlight-coinductive-constructor-face ((t (:foreground "gold"))) t)
- ;; '(agda2-highlight-datatype-face ((t (:foreground "SteelBlue2"))) t)
- ;; '(agda2-highlight-dotted-face ((t (:foreground "gray75"))) t)
- ;; '(agda2-highlight-error-face ((t (:foreground "orange red" :underline t))) t)
- ;; '(agda2-highlight-field-face ((t (:foreground "sea green"))) t)
- ;; '(agda2-highlight-function-face ((t (:foreground "SteelBlue2"))) t)
- ;; '(agda2-highlight-incomplete-pattern-face ((t (:background "wheat" :foreground "black"))) t)
- ;; '(agda2-highlight-inductive-constructor-face ((t (:foreground "SpringGreen3"))) t)
- ;; '(agda2-highlight-keyword-face ((t (:foreground "brown1"))) t)
- ;; '(agda2-highlight-macro-face ((t (:foreground "aquamarine4"))) t)
- ;; '(agda2-highlight-module-face ((t (:foreground "slate purple"))) t)
- ;; '(agda2-highlight-number-face ((t (:foreground "medium purple"))) t)
- ;; '(agda2-highlight-operator-face ((t (:foreground "gray75"))) t)
- ;; '(agda2-highlight-postulate-face ((t (:foreground "SteelBlue2"))) t)
- ;; '(agda2-highlight-primitive-face ((t (:foreground "SteelBlue2"))) t)
- ;; '(agda2-highlight-primitive-type-face ((t (:foreground "SteelBlue2"))) t)
- ;; '(agda2-highlight-record-face ((t (:foreground "SteelBlue2"))) t)
- ;; '(agda2-highlight-string-face ((t (:foreground "indian red"))) t)
- ;; '(agda2-highlight-symbol-face ((t (:foreground "gray75"))) t)
- ;; '(agda2-highlight-termination-problem-face ((t (:background "light salmon" :foreground "black"))) t)
- ;; '(agda2-highlight-typechecks-face ((t (:background "light blue" :foreground "black"))) t)
- ;; '(agda2-highlight-unsolved-constraint-face ((t (:background "yellow" :foreground "black"))) t)
- ;; '(agda2-highlight-unsolved-meta-face ((t (:background "yellow" :foreground "black"))) t)
+ '(column-enforce-face ((t (:underline (:color "medium orchid" :style wave)))))
  '(font-latex-sectioning-5-face ((t (:inherit variable-pitch :foreground "SteelBlue1" :weight bold))) t)
  '(powerline-active2 ((t (:inherit mode-line :background "gray30" :foreground "white"))))
  '(powerline-active3 ((t (:inherit mode-line :background "gray40" :foreground "white")))))
