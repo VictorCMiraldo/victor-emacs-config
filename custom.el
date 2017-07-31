@@ -35,6 +35,7 @@
  '(inhibit-startup-screen t)
  '(linum-relative-current-symbol "")
  '(linum-relative-global-mode t)
+ '(neo-autorefresh nil)
  '(neo-hidden-regexp-list
    (quote
     ("^\\." "\\.pyc$" "~$" "^#.*#$" "\\.elc$" "\\.agdai")))
@@ -66,6 +67,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(agda2-highlight-number-face ((t (:foreground "tomato1"))))
+ '(agda2-highlight-postulate-face ((t (:foreground "plum"))))
+ '(agda2-highlight-primitive-face ((t (:foreground "orchid"))))
+ '(agda2-highlight-record-face ((t (:foreground "#8CD0D3"))))
  '(column-enforce-face ((t (:underline (:color "medium orchid" :style wave)))))
  '(font-latex-sectioning-5-face ((t (:inherit variable-pitch :foreground "SteelBlue1" :weight bold))) t)
  '(powerline-active2 ((t (:inherit mode-line :background "gray30" :foreground "white"))))

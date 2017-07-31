@@ -71,7 +71,8 @@
     ("zenburn-blue-3"   . "#5C888B")
     ("zenburn-blue-4"   . "#4C7073")
     ("zenburn-blue-5"   . "#366060")
-    ("zenburn-magenta"  . "#DC8CC3"))
+    ("zenburn-magenta"  . "#DC8CC3")
+    ("zenburn-magenta-1" . "#D1A1C2"))
   "List of Zenburn colors.
 Each element has the form (NAME . HEX).
 
