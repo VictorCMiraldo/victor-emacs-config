@@ -61,7 +61,7 @@
                           (list evt))))))))
 
 (define-key evil-insert-state-map (kbd "j") 'cofi/maybe-exit)
-(define-key evil-insert-state-map (kbd "q") 'evil-normal-state)
+(define-key evil-insert-state-map (kbd "C-q") 'evil-normal-state)
 (define-key evil-normal-state-map (kbd "K") (kbd "<escape> i RET <escape>"))
 
 ;; ** evil-snipe
