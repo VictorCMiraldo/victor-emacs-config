@@ -130,6 +130,7 @@
     "latex.el"
     "haskell.el"
     "agda.el"
+    "fstar.el"
   ))
 
 ;; Set up a larger font at my home machine. I don't have a 24 inch

@@ -1,0 +1,1 @@
+(define-package "fstar-mode" "0.9.4.0" "Support for F* programming" '((emacs "24.3") (dash "2.11")) :commit "3a9be64827bbed8e34d38803b5c44d8d4f6cd688" :url "https://github.com/FStarLang/fstar.el" :keywords '("convenience" "languages"))
