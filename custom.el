@@ -16,6 +16,7 @@
  '(evil-auto-indent nil)
  '(evil-shift-width 1)
  '(evil-snipe-scope (quote visible))
+ '(fstar-executable "fstar.exe --fstar_home /home/victor/lib/fstar")
  '(global-column-enforce-mode t)
  '(global-linum-mode t)
  '(haskell-interactive-popup-errors nil)
