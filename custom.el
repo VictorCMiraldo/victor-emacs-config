@@ -7,6 +7,7 @@
  '(ac-delay 0.4)
  '(ac-trigger-key "TAB")
  '(agda2-fontset-name "DejaVu Sans Mono 13")
+ '(agda2-program-args (quote ("--sharing")))
  '(agda2-program-name "agda")
  '(column-number-mode t)
  '(custom-safe-themes
@@ -59,6 +60,9 @@
    (quote
     (("gnu" . "http://elpa.gnu.org/packages/")
      ("melpa-stable" . "http://stable.melpa.org/packages/"))))
+ '(package-selected-packages
+   (quote
+    (dash auctex unicode-fonts undo-tree org neotree mmm-mode haskell-mode git-timemachine auto-complete)))
  '(standard-indent 2)
  '(tab-always-indent t)
  '(tool-bar-mode nil))
@@ -67,6 +71,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(agda2-highlight-catchall-clause-face ((t (:slant italic))))
  '(agda2-highlight-number-face ((t (:foreground "tomato1"))))
  '(agda2-highlight-postulate-face ((t (:foreground "plum"))))
  '(agda2-highlight-primitive-face ((t (:foreground "orchid"))))

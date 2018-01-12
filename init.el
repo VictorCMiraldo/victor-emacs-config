@@ -124,7 +124,7 @@
 ;; Loads some libraries under victor/ subfolder.
 ;;
 (mapc (lambda (x) 
-         (load (expand-file-name (concat ".emacs.d/local/" x))))
+         (load (expand-file-name (concat "~/.emacs.d/local/" x))))
   (list
     "emacs-func.el"
     "latex.el"

@@ -26,11 +26,39 @@
   "Kill haskell process. Very usefull when it starts leaking"
   (interactive)
   (kill-process (haskell-process-process (haskell-commands-process))))
+;; Making some alignment magic
+
+(unless (bound-and-true-p align-rules-list)
+  (setq align-rules-list '())
+)
+(add-to-list 'align-rules-list
+             '(haskell-types
+               (regexp . "\\(\\s-+\\)\\(::\\|∷\\)\\s-+")
+               (modes quote (haskell-mode literate-haskell-mode))))
+(add-to-list 'align-rules-list
+             '(haskell-assignment
+               (regexp . "\\(\\s-+\\)=\\s-+")
+               (modes quote (haskell-mode literate-haskell-mode))))
+(add-to-list 'align-rules-list
+             '(haskell-arrows
+               (regexp . "\\(\\s-+\\)\\(->\\|→\\)\\s-+")
+               (modes quote (haskell-mode literate-haskell-mode))))
+(add-to-list 'align-rules-list
+             '(haskell-left-arrows
+               (regexp . "\\(\\s-+\\)\\(<-\\|←\\)\\s-+")
+               (modes quote (haskell-mode literate-haskell-mode))))
+
+;; My own haskell-align
+(defun haskell-align (start end)
+  (interactive "r")
+  (align start end nil my-align-rules-list))
 
 ;; 
 ;; Some haskell-mode functionality keybindings.
 ;;
 (with-eval-after-load 'haskell-mode
+  (define-key haskell-mode-map (kbd "M-[")
+      'align)
   (define-key haskell-mode-map (kbd "<f8>")
       'haskell-navigate-imports)
   (define-key haskell-mode-map (kbd "C-c M-e")
