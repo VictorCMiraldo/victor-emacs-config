@@ -62,7 +62,7 @@
      ("melpa-stable" . "http://stable.melpa.org/packages/"))))
  '(package-selected-packages
    (quote
-    (helm helm-ebdb dash auctex unicode-fonts undo-tree org neotree mmm-mode haskell-mode git-timemachine auto-complete)))
+    (helm-projectile projectile helm helm-ebdb dash auctex unicode-fonts undo-tree org neotree mmm-mode haskell-mode git-timemachine auto-complete)))
  '(standard-indent 2)
  '(tab-always-indent t)
  '(tool-bar-mode nil))

@@ -33,6 +33,12 @@
 (require 'column-enforce-mode)
 (require 'persistent-soft)
 (require 'helm-config)
+(require 'projectile)
+(require 'helm-projectile)
+
+;; * Projectile Stuff
+(projectile-mode)
+(helm-projectile-on)
 
 ;; Evil mode with powerline
 (evil-mode 1)
@@ -111,7 +117,7 @@
 ;; Borrowed from running emacs-helm.sh
 (helm-mode 1)
 
-(define-key global-map [remap find-file] 'helm-find-files)
+(define-key global-map [remap find-file] 'helm-projectile-find-file)
 (define-key global-map [remap occur] 'helm-occur)
 (define-key global-map [remap list-buffers] 'helm-buffers-list)
 (define-key global-map [remap dabbrev-expand] 'helm-dabbrev)
