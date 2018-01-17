@@ -114,6 +114,10 @@
 ;; * Helm Stuff
 
 ;; Borrowed from running emacs-helm.sh
+;; The helm-mode-handle-completion-in-region set to nil DISABLES
+;; helm for complete-at-point functions
+;;
+(setq helm-mode-handle-completion-in-region 'nil)
 (helm-mode 1)
 
 (define-key global-map [remap find-file] 'helm-projectile-find-file)
@@ -121,10 +125,6 @@
 (define-key global-map [remap list-buffers] 'helm-buffers-list)
 (define-key global-map [remap dabbrev-expand] 'helm-dabbrev)
 (define-key global-map [remap execute-extended-command] 'helm-M-x)
-(unless (boundp 'completion-in-region-function)
-  (define-key lisp-interaction-mode-map [remap completion-at-point] 'helm-lisp-completion-at-point)
-  (define-key emacs-lisp-mode-map       [remap completion-at-point] 'helm-lisp-completion-at-point))
-
 
 ;; ##########
 ;;
@@ -148,9 +148,9 @@
          (load (expand-file-name (concat ".emacs.d/local/" x))))
   (list
     "emacs-func.el"
-    ;; "latex.el"
+    "latex.el"
     "haskell.el"
-    ;; "agda.el"
+    "agda.el"
   ))
 
 ;; Set up a larger font at my home machine. I don't have a 24 inch
