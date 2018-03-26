@@ -3,9 +3,50 @@
 ;; Before anythingv we need package utils.
 (require 'package)
 
+; list the packages you want
+(setq package-list 
+  '(auctex
+    async
+    auto-complete
+    dash
+    epl
+    font-utils
+    git-timemachine
+    haskell-mode
+    helm
+    helm-core
+    helm-projectile
+    list-utils
+    mmm-mode
+    neotree
+    org
+    pcache
+    persistent-soft
+    pkg-info
+    popup
+    projectile
+    ucs-utils
+    undo-tree
+    unicode-fonts))
+
+; list the repositories containing them
+(setq package-archives 
+  '(("gnu" . "http://elpa.gnu.org/packages/")
+    ("marmalade" . "http://marmalade-repo.org/packages/")
+    ("melpa" . "http://melpa.org/packages/")))
+
 ;; And we initialize our elpa packages BEFORE
 ;; running the init file.
 (package-initialize)
+
+;; Refrehs package contents
+(or (file-exists-p package-user-dir) (package-refresh-contents))
+
+;; Install specified packages
+(dolist (package package-list)
+  (unless (package-installed-p package)
+          (package-install package)))
+
 (setq package-enable-at-startup nil)
 
 ;; add load paths
@@ -152,7 +193,7 @@
     "emacs-func.el"
     "latex.el"
     "haskell.el"
-    "agda.el"
+;;    "agda.el"
   ))
 
 ;; Set up a larger font at my home machine. I don't have a 24 inch

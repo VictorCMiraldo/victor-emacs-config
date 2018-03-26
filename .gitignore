@@ -2,3 +2,4 @@
 *.elc
 *.signed
 *.dat
+elpa/*
