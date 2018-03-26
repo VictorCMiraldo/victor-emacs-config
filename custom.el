@@ -27,7 +27,7 @@
     ("--ghci-options=-ferror-spans +RTS -M12G -RTS" "--allow-different-user")))
  '(haskell-process-auto-import-loaded-modules t)
  '(haskell-process-log t)
- '(haskell-process-path-cabal "/usr/local/bin/cabal")
+ '(haskell-process-path-cabal "cabal")
  '(haskell-process-suggest-remove-import-lines nil)
  '(haskell-process-type (quote auto))
  '(haskell-tags-on-save nil)
