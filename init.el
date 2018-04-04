@@ -158,6 +158,12 @@
 ;; Borrowed from running emacs-helm.sh
 (helm-mode 1)
 
+;; HACK: Apr 4th 2018
+;; helm projectlie is crashing complaining about
+;; string-empty-p being undefined... well, I'm hacking my way through.
+(defun string-empty-p (str)
+  (string= "" str))
+
 (define-key global-map [remap find-file] 'helm-projectile-find-file)
 (define-key global-map [remap occur] 'helm-occur)
 (define-key global-map [remap list-buffers] 'helm-buffers-list)
