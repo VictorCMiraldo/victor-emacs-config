@@ -72,6 +72,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(agda2-highlight-catchall-clause-face ((t (:slant italic))))
+ '(agda2-highlight-coverage-problem-face ((t (:underline (:color "wheat" :style wave)))))
+ '(agda2-highlight-field-face ((t (:foreground "#8CD083"))))
  '(agda2-highlight-number-face ((t (:foreground "tomato1"))))
  '(agda2-highlight-postulate-face ((t (:foreground "plum"))))
  '(agda2-highlight-primitive-face ((t (:foreground "orchid"))))

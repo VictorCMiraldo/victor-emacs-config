@@ -257,11 +257,11 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(agda2-highlight-datatype-face ((t (:foreground ,zenburn-blue))))
    `(agda2-highlight-function-face ((t (:foreground ,zenburn-blue))))
    `(agda2-highlight-module-face ((t (:foreground ,zenburn-blue-1))))
-   `(agda2-highlight-error-face ((t (:foreground ,zenburn-fg :box ,zenburn-magenta))))
+   `(agda2-highlight-error-face ((t (:underline (:color ,zenburn-red :style wave)))))
    `(agda2-highlight-unsolved-meta-face ((t (:foreground ,zenburn-fg :box ,zenburn-magenta))))
    `(agda2-highlight-unsolved-constraint-face ((t (:foreground ,zenburn-fg :box ,zenburn-magenta))))
    `(agda2-highlight-termination-problem-face ((t (:foreground ,zenburn-fg :box ,zenburn-magenta))))
-   `(agda2-highlight-incomplete-pattern-face ((t (:foreground ,zenburn-fg :box ,zenburn-magenta))))
+   `(agda2-highlight-incomplete-pattern-face ((t (:underline (:color zenburn-magenta :style wave)))))
    `(agda2-highlight-typechecks-face ((t (:background ,zenburn-red-4))))
 ;;;;; auto-complete
    `(ac-candidate-face ((t (:background ,zenburn-bg+3 :foreground ,zenburn-bg-2))))
