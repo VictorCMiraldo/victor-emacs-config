@@ -96,21 +96,41 @@
   :repeat change
   (interactive)
   (let ((modified (buffer-modified-p)))
-    (insert "j")
+    (insert "f")
     (let ((evt (read-event (format "Insert %c to exit insert state" ?k)
                nil 0.5)))
       (cond
        ((null evt) (message ""))
-       ((and (integerp evt) (char-equal evt ?k))
+       ((and (integerp evt) (char-equal evt ?j))
     (delete-char -1)
     (set-buffer-modified-p modified)
     (push 'escape unread-command-events))
        (t (setq unread-command-events (append unread-command-events
                           (list evt))))))))
 
-(define-key evil-insert-state-map (kbd "j") 'cofi/maybe-exit)
+(define-key evil-insert-state-map (kbd "f") 'cofi/maybe-exit)
 (define-key evil-insert-state-map (kbd "C-q") 'evil-normal-state)
 (define-key evil-normal-state-map (kbd "K") (kbd "<escape> i RET <escape>"))
+
+;; ** Evil buffer changing
+
+;; evil-mode binds C-. I want it for changing buffers
+(eval-after-load "evil-maps"
+  (dolist (map '(evil-motion-state-map
+                 evil-insert-state-map
+                 evil-normal-state-map
+                 evil-emacs-state-map))
+    (define-key (eval map) (kbd "C-.") nil)))
+
+;; And now, my binds:
+(define-key evil-normal-state-map (kbd "gt") 'other-window)
+(global-set-key (kbd "C-.") 'other-window)
+(global-set-key (kbd "C-,") 'prev-window)
+
+(defun prev-window ()
+  (interactive)
+  (other-window -1))
+
 
 ;; ** evil-snipe
 ;; 
@@ -131,8 +151,10 @@
 
 ;; * Emacs align
 (global-set-key (kbd "C-a") 'align-regexp)
-
 ;; TODO: add some evil operator for aligning code on visual mode.
+
+;; * Emacs Fill-paragraph to C-M-j
+(global-set-key (kbd "C-M-j") 'fill-paragraph)
 
 ;; * Auto Complete
 ;;

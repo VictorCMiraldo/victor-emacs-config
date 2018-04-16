@@ -1,27 +1,3 @@
-;; Some general emacs functionality
-
-;; Fill-paragraph to C-M-j
-(global-set-key (kbd "C-M-j") 'fill-paragraph)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Window changing
-
-;; evil-mode binds C-. I want it...
-(eval-after-load "evil-maps"
-  (dolist (map '(evil-motion-state-map
-                 evil-insert-state-map
-                 evil-normal-state-map
-                 evil-emacs-state-map))
-    (define-key (eval map) (kbd "C-.") nil)))
-
-;; And now, my binds:
-(global-set-key (kbd "C-.") 'other-window)
-(global-set-key (kbd "C-,") 'prev-window)
-
-(defun prev-window ()
-  (interactive)
-  (other-window -1))
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; My pattern matching wonder
