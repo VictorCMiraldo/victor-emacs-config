@@ -14,6 +14,10 @@
    (quote
     ("4528fb576178303ee89888e8126449341d463001cb38abe0015541eb798d8a23" "7a4efa993973000e5872099a3c24c310b8bb2568b70f3b9d53675e6edf1f3ce4" default)))
  '(custom-theme-directory "~/.emacs.d/themes/")
+ '(display-buffer-alist
+   (quote
+    (("*Shell Command Output*" (display-buffer-reuse-window display-buffer-below-selected)
+      (window-height . 5)))))
  '(evil-auto-indent nil)
  '(evil-shift-width 1)
  '(evil-snipe-scope (quote visible))
@@ -79,7 +83,7 @@
  '(agda2-highlight-primitive-face ((t (:foreground "orchid"))))
  '(agda2-highlight-record-face ((t (:foreground "#8CD0D3"))))
  '(column-enforce-face ((t (:underline (:color "medium orchid" :style wave)))))
- '(font-latex-sectioning-5-face ((t (:inherit variable-pitch :foreground "SteelBlue1" :weight bold))) t)
+ '(font-latex-sectioning-5-face ((t (:inherit variable-pitch :foreground "SteelBlue1" :weight bold))))
  '(powerline-active2 ((t (:inherit mode-line :background "gray30" :foreground "white"))))
  '(powerline-active3 ((t (:inherit mode-line :background "gray40" :foreground "white")))))
 
