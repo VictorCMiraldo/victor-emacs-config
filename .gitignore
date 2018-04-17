@@ -3,3 +3,8 @@
 *.signed
 *.dat
 elpa/*
+
+network-security.data
+projectile-bookmarks.eld
+var/*
+
