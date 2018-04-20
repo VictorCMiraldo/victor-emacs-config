@@ -17,7 +17,7 @@
  '(display-buffer-alist
    (quote
     (("*Shell Command Output*" (display-buffer-reuse-window display-buffer-below-selected)
-      (window-height . 5)))))
+      (window-height . 8)))))
  '(evil-auto-indent nil)
  '(evil-shift-width 1)
  '(evil-snipe-scope (quote visible))

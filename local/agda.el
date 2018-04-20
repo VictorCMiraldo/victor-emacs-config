@@ -19,4 +19,4 @@
     'agda2-goto-definition-mouse)))
 
 ;; load other relevant files for my agda mode.
-(load (expand-file-name ".emacs.d/local/agda-tag.el"))
+(load (expand-file-name "~/.emacs.d/local/agda-tag.el"))
