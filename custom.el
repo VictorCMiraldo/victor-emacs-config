@@ -16,7 +16,8 @@
  '(custom-theme-directory "~/.emacs.d/themes/")
  '(display-buffer-alist
    (quote
-    (("*Shell Command Output*" (display-buffer-reuse-window display-buffer-below-selected)
+    (("*Shell Command Output*"
+      (display-buffer-reuse-window display-buffer-below-selected)
       (window-height . 8)))))
  '(evil-auto-indent nil)
  '(evil-shift-width 1)
@@ -29,7 +30,7 @@
  '(haskell-process-args-ghci (quote ("+RTS -M12G -RTS")))
  '(haskell-process-args-stack-ghci
    (quote
-    ("--ghci-options=-fshow-loaded-modules -ferror-spans +RTS -M12G -RTS" "--allow-different-user")))
+    ("--ghci-options=-ferror-spans +RTS -M12G -RTS" "--allow-different-user")))
  '(haskell-process-auto-import-loaded-modules t)
  '(haskell-process-log t)
  '(haskell-process-path-cabal "cabal")

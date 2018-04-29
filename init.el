@@ -80,6 +80,7 @@
 ;; * Projectile Stuff
 (projectile-mode)
 (helm-projectile-on)
+(ac-config-default)
 
 ;; Evil mode with powerline
 (evil-mode 1)
@@ -221,7 +222,7 @@
     "emacs-func.el"
     "latex.el"
     "haskell.el"
-    "agda.el"
+    ;; "agda.el"
   ))
 
 ;; Set up a larger font at my home machine. I don't have a 24 inch
