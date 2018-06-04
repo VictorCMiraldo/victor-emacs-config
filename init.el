@@ -20,6 +20,7 @@
     mmm-mode
     neotree
     org
+    org-caldav
     pcache
     persistent-soft
     pkg-info
@@ -62,6 +63,7 @@
 
 ;; Packages required by us are:
 (require 'org)
+(require 'org-caldav)
 (require 'neotree)
 (require 'auto-complete)
 (require 'goto-chg)
@@ -196,6 +198,25 @@
   (define-key emacs-lisp-mode-map       [remap completion-at-point] 'helm-lisp-completion-at-point))
 
 
+;; Org-mode goodies
+
+;; Agenda files
+(setq org-agenda-files 
+  (list "~/usr/org/personal.org"
+        "~/usr/org/work.org"))			     
+
+(setq org-caldav-calendars
+  '((:calendar-id "default" ;; personal@posteo
+     :url         "https://posteo.de:8443/calendars/v.cacciarimiraldo/"
+     ;; push events to the server from personal.org
+     :files       ("~/usr/org/personal.org")
+     ;; Store events from the server in from_personal.org
+     :inbox       "~/usr/org/from_personal.org")
+    (:calendar-id "kkmpxj" ;; work@posteo
+     :url         "https://posteo.de:8443/calendars/v.cacciarimiraldo/"
+     :files       ("~/usr/org/work.org")
+     :inbox       "~/usr/org/from_work.org"))
+)
 
 ;; ##########
 ;;
