@@ -16,7 +16,8 @@
  '(custom-theme-directory "~/.emacs.d/themes/")
  '(display-buffer-alist
    (quote
-    (("*Shell Command Output*" (display-buffer-reuse-window display-buffer-below-selected)
+    (("*Shell Command Output*"
+      (display-buffer-reuse-window display-buffer-below-selected)
       (window-height . 8)))))
  '(evil-auto-indent nil)
  '(evil-shift-width 1)
