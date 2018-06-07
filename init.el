@@ -8,6 +8,8 @@
   '(auctex
     async
     auto-complete
+    calfw
+    calfw-ical
     dash
     epl
     font-utils
@@ -61,6 +63,8 @@
 (add-to-list 'load-path "~/.emacs.d/manual/persistent-soft")
 
 ;; Packages required by us are:
+(require 'calfw)
+(require 'calfw-ical)
 (require 'org)
 (require 'neotree)
 (require 'auto-complete)
@@ -196,6 +200,22 @@
   (define-key emacs-lisp-mode-map       [remap completion-at-point] 'helm-lisp-completion-at-point))
 
 
+;; Calendars using calfw
+
+(defun my-calendars ()
+  (interactive)
+  (cfw:open-calendar-buffer
+   :contents-sources
+   (list 
+    (cfw:ical-create-source "Personal" 
+                            ;; "https://posteo.de/calendars/ics/iyvn5who1x9obu12nf1bott0dh486jz0"
+                            ;; "https://posteo.de:8443/calendars/v.cacciarimiraldo/default/" 
+                            "https://calendar.google.com/calendar/ical/v.cacciarimiraldo%40gmail.com/private-d325fb8d585f5e25fafb1f5d83b36c66/basic.ics"
+                            "Gray")
+   ))
+)
+
+(global-set-key (kbd "C-c a l") 'my-calendars)
 
 ;; ##########
 ;;
