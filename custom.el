@@ -26,11 +26,18 @@
  '(global-linum-mode t)
  '(haskell-interactive-popup-errors nil)
  '(haskell-literate-default (quote tex))
- '(haskell-process-args-cabal-repl (quote ("--ghc-option='-ferror-spans +RTS -M12G -RTS'")))
- '(haskell-process-args-ghci (quote ("+RTS -M12G -RTS")))
+ '(haskell-process-args-cabal-new-repl
+   (quote
+    ("--ghc-option=-ferror-spans -fshow-loaded-modules")))
+ '(haskell-process-args-cabal-repl
+   (quote
+    ("--ghc-option='-ferror-spans -fshow-loaded-modules +RTS -M12G -RTS'")))
+ '(haskell-process-args-ghci
+   (quote
+    ("-ferror-spans" "-fshow-loaded-modules" "+RTS -M12G -RTS")))
  '(haskell-process-args-stack-ghci
    (quote
-     ("--ghci-options=-fshow-loaded-modules -ferror-spans +RTS -M12G -RTS" "--allow-different-user")))
+    ("--ghci-options=-ferror-spans -fshow-loaded-modules +RTS -M12G -RTS" "--allow-different-user")))
  '(haskell-process-auto-import-loaded-modules t)
  '(haskell-process-log t)
  '(haskell-process-path-cabal "cabal")
