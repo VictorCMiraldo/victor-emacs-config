@@ -17,6 +17,7 @@
     helm-core
     helm-projectile
     list-utils
+    magit
     mmm-mode
     neotree
     org
@@ -69,13 +70,15 @@
 (require 'linum-relative)
 (require 'evil)
 (require 'evil-surround)
-(require 'evil-snipe)
+(require 'evil-snipe) ;; apparently it conflicts with evil-magit
 (require 'mybuffers)
 (require 'column-enforce-mode)
 (require 'persistent-soft)
 (require 'helm-config)
 (require 'projectile)
 (require 'helm-projectile)
+(require 'magit)
+
 
 ;; * Projectile Stuff
 (projectile-mode)
@@ -222,7 +225,7 @@
     "emacs-func.el"
     "latex.el"
     "haskell.el"
-    ;; "agda.el"
+    "agda.el"
   ))
 
 ;; Set up a larger font at my home machine. I don't have a 24 inch
