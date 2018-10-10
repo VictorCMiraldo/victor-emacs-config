@@ -12,6 +12,7 @@
     epl
     evil
     evil-surround
+    evil-magit
     font-utils
     git-timemachine
     goto-chg
@@ -20,6 +21,7 @@
     helm-core
     helm-projectile
     list-utils
+    magit
     mmm-mode
     neotree
     org
@@ -67,8 +69,10 @@
 (require 'goto-chg)
 (require 'linum-relative)
 (require 'undo-tree)
+(require 'magit)
 (require 'evil)
 (require 'evil-surround)
+(require 'evil-magit)
 (require 'powerline)
 (require 'powerline-evil)
 (require 'mybuffers)
