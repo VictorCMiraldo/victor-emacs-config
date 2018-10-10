@@ -86,5 +86,8 @@
  '(column-enforce-face ((t (:underline (:color "medium orchid" :style wave)))))
  '(font-latex-sectioning-5-face ((t (:inherit variable-pitch :foreground "SteelBlue1" :weight bold))))
  '(powerline-active2 ((t (:inherit mode-line :background "gray30" :foreground "white"))))
- '(powerline-active3 ((t (:inherit mode-line :background "gray40" :foreground "white")))))
+ '(powerline-active3 ((t (:inherit mode-line :background "gray40" :foreground "white"))))
+ '(powerline-evil-normal-face ((t (:inherit powerline-evil-base-face :background "red"))))
+ '(powerline-evil-operator-face ((t (:inherit powerline-evil-operator-face :background "midnight blue"))))
+ '(powerline-evil-replace-face ((t (:inherit powerline-evil-base-face :background "black")))))
 

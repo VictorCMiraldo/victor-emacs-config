@@ -10,8 +10,12 @@
     auto-complete
     dash
     epl
+    evil
+    evil-surround
+    evil-snipe
     font-utils
     git-timemachine
+    goto-chg
     haskell-mode
     helm
     helm-core
@@ -24,6 +28,8 @@
     persistent-soft
     pkg-info
     popup
+    powerline
+    powerline-evil
     projectile
     ucs-utils
     undo-tree
@@ -50,12 +56,12 @@
 (setq package-enable-at-startup nil)
 
 ;; add load paths
-(add-to-list 'load-path "~/.emacs.d/manual/evil-1.2.12")
-(add-to-list 'load-path "~/.emacs.d/manual/goto-chg-1.6")
-(add-to-list 'load-path "~/.emacs.d/manual/powerline-2.4")
+;; (add-to-list 'load-path "~/.emacs.d/manual/evil-1.2.12")
+;; (add-to-list 'load-path "~/.emacs.d/manual/goto-chg-1.6")
+;; (add-to-list 'load-path "~/.emacs.d/manual/powerline-2.4")
 (add-to-list 'load-path "~/.emacs.d/manual/linum-relative-0.5")
-(add-to-list 'load-path "~/.emacs.d/manual/evil-snipe-2.0.6")
-(add-to-list 'load-path "~/.emacs.d/manual/evil-surround-0.1")
+;; (add-to-list 'load-path "~/.emacs.d/manual/evil-snipe-2.0.6")
+;; (add-to-list 'load-path "~/.emacs.d/manual/evil-surround-0.1")
 (add-to-list 'load-path "~/.emacs.d/manual/mybuffers")
 (add-to-list 'load-path "~/.emacs.d/manual/column-enforce-mode")
 (add-to-list 'load-path "~/.emacs.d/manual/persistent-soft")
@@ -65,11 +71,13 @@
 (require 'neotree)
 (require 'auto-complete)
 (require 'goto-chg)
-(require 'powerline)
 (require 'linum-relative)
+(require 'undo-tree)
 (require 'evil)
 (require 'evil-surround)
 (require 'evil-snipe)
+(require 'powerline)
+(require 'powerline-evil)
 (require 'mybuffers)
 (require 'column-enforce-mode)
 (require 'persistent-soft)
@@ -83,7 +91,7 @@
 
 ;; Evil mode with powerline
 (evil-mode 1)
-(powerline-evil-theme)
+(powerline-evil-center-color-theme)
 (global-evil-surround-mode 1)
 (evil-snipe-override-mode 1)
 
@@ -209,7 +217,6 @@
 ;; * Visuals
 ;;
 (load-theme 'zenburn t)
-
 
 ;; * My personal code
 ;;
