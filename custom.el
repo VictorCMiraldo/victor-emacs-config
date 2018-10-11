@@ -5,11 +5,16 @@
  ;; If there is more than one, they won't work right.
  '(ac-auto-start nil)
  '(ac-delay 0.4)
+ '(ac-disable-inline nil)
+ '(ac-expand-on-auto-complete nil)
+ '(ac-ignore-case nil)
  '(ac-trigger-key "TAB")
+ '(ac-use-comphist t)
  '(agda2-fontset-name "DejaVu Sans Mono 13")
  '(agda2-program-args (quote ("--sharing")))
  '(agda2-program-name "agda")
  '(column-number-mode t)
+ '(completion-styles (quote (emacs22)))
  '(custom-safe-themes
    (quote
     ("4528fb576178303ee89888e8126449341d463001cb38abe0015541eb798d8a23" "7a4efa993973000e5872099a3c24c310b8bb2568b70f3b9d53675e6edf1f3ce4" default)))
@@ -24,6 +29,7 @@
  '(evil-snipe-scope (quote visible))
  '(global-column-enforce-mode t)
  '(global-linum-mode t)
+ '(haskell-indent-offset 2)
  '(haskell-interactive-popup-errors nil)
  '(haskell-literate-default (quote tex))
  '(haskell-process-args-cabal-repl (quote ("--ghc-option='-ferror-spans +RTS -M12G -RTS'")))
