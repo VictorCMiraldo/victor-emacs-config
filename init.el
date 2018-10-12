@@ -13,6 +13,7 @@
     evil
     evil-surround
     evil-magit
+    evil-space
     font-utils
     git-timemachine
     goto-chg
@@ -73,6 +74,7 @@
 (require 'evil)
 (require 'evil-surround)
 (require 'evil-magit)
+(require 'evil-space)
 (require 'powerline)
 (require 'powerline-evil)
 (require 'mybuffers)
@@ -88,6 +90,7 @@
 
 ;; Evil mode with powerline
 (evil-mode 1)
+(evil-space-mode)
 (powerline-evil-center-color-theme)
 (global-evil-surround-mode 1)
 
