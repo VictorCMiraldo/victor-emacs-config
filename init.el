@@ -83,6 +83,10 @@
 (require 'helm-config)
 (require 'projectile)
 (require 'helm-projectile)
+(require 'unicode-fonts)
+
+;; Unicode fonts startup
+(unicode-fonts-setup)
 
 ;; * Projectile Stuff
 (projectile-mode)
