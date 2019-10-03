@@ -80,6 +80,8 @@
    (quote
     (helm-projectile projectile helm helm-ebdb dash auctex unicode-fonts undo-tree org neotree mmm-mode haskell-mode git-timemachine auto-complete)))
  '(reftex-file-extensions (quote (("tex" ".tex" ".ltx" ".lhs") ("bib" ".bib"))))
+ '(reftex-include-file-commands (quote ("include" "input" "lhsinclude")))
+ '(reftex-try-all-extensions t)
  '(standard-indent 2)
  '(tab-always-indent t)
  '(tool-bar-mode nil)
