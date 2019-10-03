@@ -4,6 +4,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(TeX-auto-save t)
+ '(TeX-file-extensions
+   (quote
+    ("tex" "sty" "cls" "ltx" "texi" "txi" "texinfo" "dtx" "lhs")))
  '(TeX-one-master "\\.\\(texi?\\|dtx\\|lhs\\)$")
  '(ac-auto-start nil)
  '(ac-delay 0.4)
@@ -76,6 +79,7 @@
  '(package-selected-packages
    (quote
     (helm-projectile projectile helm helm-ebdb dash auctex unicode-fonts undo-tree org neotree mmm-mode haskell-mode git-timemachine auto-complete)))
+ '(reftex-file-extensions (quote (("tex" ".tex" ".ltx" ".lhs") ("bib" ".bib"))))
  '(standard-indent 2)
  '(tab-always-indent t)
  '(tool-bar-mode nil)
