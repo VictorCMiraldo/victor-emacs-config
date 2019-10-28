@@ -85,10 +85,6 @@
 (require 'helm-projectile)
 (require 'unicode-fonts)
 
-;; swap Ctrl and Meta
-(setq x-ctrl-keysym 'meta)
-(setq x-meta-keysym 'ctrl)
-
 ;; Unicode fonts startup
 (unicode-fonts-setup)
 
