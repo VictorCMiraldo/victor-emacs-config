@@ -8,6 +8,7 @@
   '(auctex
     async
     auto-complete
+    ac-haskell-process
     dash
     epl
     evil
