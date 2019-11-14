@@ -5,6 +5,12 @@
 (require 'haskell-process)
 (require 'haskell-interactive-mode)
 
+(require 'ac-haskell-process) 
+(add-hook 'interactive-haskell-mode-hook 'ac-haskell-process-setup)
+(add-hook 'haskell-interactive-mode-hook 'ac-haskell-process-setup)
+(eval-after-load "auto-complete"
+  '(add-to-list 'ac-modes 'haskell-interactive-mode))
+
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
 
 ;; makes sure emacs knows what are haskell files
