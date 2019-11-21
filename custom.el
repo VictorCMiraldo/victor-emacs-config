@@ -8,7 +8,7 @@
    (quote
     ("tex" "sty" "cls" "ltx" "texi" "txi" "texinfo" "dtx" "lhs")))
  '(TeX-one-master "\\.\\(texi?\\|dtx\\|lhs\\)$")
- '(ac-auto-start nil)
+ '(ac-auto-start 2)
  '(ac-delay 0.4)
  '(ac-disable-inline nil)
  '(ac-expand-on-auto-complete nil)
@@ -32,6 +32,7 @@
  '(evil-auto-indent nil)
  '(evil-shift-width 1)
  '(evil-snipe-scope (quote visible))
+ '(global-auto-complete-mode t)
  '(global-column-enforce-mode t)
  '(global-linum-mode t)
  '(haskell-indent-offset 2)
@@ -48,6 +49,7 @@
  '(haskell-process-suggest-remove-import-lines nil)
  '(haskell-process-type (quote auto))
  '(haskell-tags-on-save nil)
+ '(helm-mode-handle-completion-in-region nil)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(linum-relative-current-symbol "")
@@ -83,7 +85,7 @@
  '(reftex-include-file-commands (quote ("include" "input" "lhsinclude")))
  '(reftex-try-all-extensions t)
  '(standard-indent 2)
- '(tab-always-indent t)
+ '(tab-always-indent (quote complete))
  '(tool-bar-mode nil)
  '(unicode-fonts-block-font-mapping
    (quote

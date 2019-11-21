@@ -34,6 +34,7 @@
     powerline
     powerline-evil
     projectile
+    racket-mode
     ucs-utils
     undo-tree
     unicode-fonts))
@@ -196,9 +197,9 @@
 (define-key global-map [remap list-buffers] 'helm-buffers-list)
 (define-key global-map [remap dabbrev-expand] 'helm-dabbrev)
 (define-key global-map [remap execute-extended-command] 'helm-M-x)
-(unless (boundp 'completion-in-region-function)
-  (define-key lisp-interaction-mode-map [remap completion-at-point] 'helm-lisp-completion-at-point)
-  (define-key emacs-lisp-mode-map       [remap completion-at-point] 'helm-lisp-completion-at-point))
+;; (unless (boundp 'completion-in-region-function)
+;;   (define-key lisp-interaction-mode-map [remap completion-at-point] 'helm-lisp-completion-at-point)
+;;   (define-key emacs-lisp-mode-map       [remap completion-at-point] 'helm-lisp-completion-at-point))
 
 
 
@@ -225,6 +226,7 @@
     "emacs-func.el"
     "latex.el"
     "haskell.el"
+    "racket.el"
     "agda.el"
   ))
 
