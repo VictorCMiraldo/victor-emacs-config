@@ -30,3 +30,17 @@
 (setq reftex-toc-keep-other-windows t)
 (setq reftex-toc-include-labels t)
 (setq reftex-toc-max-level 3)
+
+;; Finally, I want to turn off spell-checking inside math
+;; and code enviroments. Good documentation for this
+;; in
+;;  https://tex.stackexchange.com/questions/117204/skip-spelling-in-emacs-for-the-content-of-a-user-macro
+;;  https://emacs.stackexchange.com/questions/5645/how-to-prevent-ispell-from-checking-inside-mathematical-formulae
+(add-hook 'LaTeX-mode-hook '(lambda ()
+  (setq ispell-tex-skip-alists
+     (list (append (car ispell-tex-skip-alists)
+                   '( ("[^\\]\\$" . "[^\\]\\$")
+                      ("\\\\begin{code}" . "\\\\end{code}$")
+                    ))
+           (cadr ispell-tex-skip-alists)))
+))
