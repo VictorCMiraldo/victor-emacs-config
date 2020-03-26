@@ -271,6 +271,7 @@
  '(agda2-highlight-record-face ((t (:foreground "#8CD0D3"))))
  '(column-enforce-face ((t (:underline (:color "medium orchid" :style wave)))))
  '(font-latex-sectioning-5-face ((t (:inherit variable-pitch :foreground "SteelBlue1" :weight bold))))
+ '(linum ((t (:background "#31343A" :foreground "#9FC59F" :height 100))))
  '(powerline-active2 ((t (:inherit mode-line :background "gray30" :foreground "white"))))
  '(powerline-active3 ((t (:inherit mode-line :background "gray40" :foreground "white"))))
  '(powerline-evil-normal-face ((t (:inherit powerline-evil-base-face :background "red"))))
