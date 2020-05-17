@@ -238,6 +238,6 @@
                       (+ (face-attribute 'default :height)
                          30)))
 
-(when (string= system-name "logos")
-  (progn (message "%s" "Setting larger font for logos")
+(when (string= system-name "Garlic")
+  (progn (message "%s" "Setting larger font for Garlic")
          (my-inc-fontsize)))
