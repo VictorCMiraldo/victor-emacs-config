@@ -13,8 +13,14 @@
 
 ;; Fix agda2-mode shortcuts
 (eval-after-load 'agda2-mode '(progn
-  (define-key agda2-mode-map (kbd "M-@")
+  (define-key agda2-mode-map (kbd "M-<right>")
     'agda2-goto-definition-keyboard)
+  (define-key agda2-mode-map (kbd "M-<left>")
+    'agda2-go-back)
+  (define-key agda2-mode-map (kbd "M-<up>")
+    'agda2-previous-goal)
+  (define-key agda2-mode-map (kbd "M-<down>")
+    'agda2-next-goal)
   (define-key evil-normal-state-map [mouse-2]
     'agda2-goto-definition-mouse)))
 
