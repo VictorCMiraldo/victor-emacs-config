@@ -4,14 +4,12 @@
 (require 'haskell-mode)
 (require 'haskell-process)
 (require 'haskell-interactive-mode)
-
-(require 'ac-haskell-process) 
-(add-hook 'interactive-haskell-mode-hook 'ac-haskell-process-setup)
-(add-hook 'haskell-interactive-mode-hook 'ac-haskell-process-setup)
-(eval-after-load "auto-complete"
-  '(add-to-list 'ac-modes 'haskell-interactive-mode))
+(require 'company-ghci) 
+(push 'company-ghci company-backends)
 
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
+(add-hook 'haskell-mode-hook 'company-mode)
+(add-hook 'haskell-interactive-mode-hook 'company-mode)
 
 ;; makes sure emacs knows what are haskell files
 (add-to-list 'auto-mode-alist '("\\.hs$" . haskell-mode))

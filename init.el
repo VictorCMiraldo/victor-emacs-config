@@ -9,6 +9,7 @@
     async
     cargo
     company
+    company-ghci
     dash
     direnv
     epl
@@ -77,7 +78,6 @@
 (require 'org)
 (require 'neotree)
 (require 'company)
-;; (require 'auto-complete)
 (require 'goto-chg)
 (require 'linum-relative)
 (require 'undo-tree)
@@ -100,9 +100,7 @@
 (unicode-fonts-setup)
 
 ;; * Helm Stuff
-
-;; Borrowed from running emacs-helm.sh
-;; (helm-mode 1)
+(helm-mode 1)
 
 ;; HACK: Apr 4th 2018
 ;; helm projectlie is crashing complaining about
@@ -121,12 +119,9 @@
 (helm-projectile-on)
 
 ;; Company mode
-(global-company-mode)
-
-(eval-after-load 'company
-  '(progn
-     (define-key company-active-map (kbd "TAB") 'company-complete-common-or-cycle)
-     (define-key company-active-map [tab] 'company-complete-common-or-cycle)))
+(eval-after-load 'company-mode
+   (progn (define-key company-active-map [tab] 'company-complete-common-or-cycle)))
+(define-key global-map (kbd "C-;") 'company-complete)
 
 
 ;; Evil mode with powerline
