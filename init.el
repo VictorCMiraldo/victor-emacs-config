@@ -7,14 +7,18 @@
 (setq package-list 
   '(auctex
     async
-    auto-complete
-    ac-haskell-process
+    ; auto-complete
+    ; ac-haskell-process
+    cargo
+    company
     dash
+    direnv
     epl
     evil
     evil-surround
     evil-magit
     evil-space
+    flycheck-rust
     font-utils
     git-timemachine
     goto-chg
@@ -23,6 +27,8 @@
     helm-core
     helm-projectile
     list-utils
+    lsp-mode
+    lsp-ui
     magit
     mmm-mode
     neotree
@@ -35,9 +41,13 @@
     powerline-evil
     projectile
     racket-mode
+    rust-mode
     ucs-utils
     undo-tree
-    unicode-fonts))
+    unicode-fonts
+    use-package
+    yasnippet
+))
 
 ; list the repositories containing them
 (setq package-archives 
@@ -226,8 +236,9 @@
     "emacs-func.el"
     "latex.el"
     "haskell.el"
-    "racket.el"
-    "agda.el"
+    "rust.el"
+    ; "racket.el"
+    ; "agda.el"
   ))
 
 ;; Set up a larger font at my home machine. I don't have a 24 inch
@@ -241,3 +252,4 @@
 (when (string= system-name "Garlic")
   (progn (message "%s" "Setting larger font for Garlic")
          (my-inc-fontsize)))
+
