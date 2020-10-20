@@ -19,6 +19,7 @@
  '(agda2-program-args nil)
  '(agda2-program-name "agda")
  '(column-number-mode t)
+ '(company-idle-delay nil)
  '(completion-styles (quote (emacs22)))
  '(custom-safe-themes
    (quote
@@ -32,6 +33,7 @@
  '(evil-auto-indent nil)
  '(evil-shift-width 1)
  '(evil-snipe-scope (quote visible))
+ '(flycheck-check-syntax-automatically (quote (save)))
  '(global-auto-complete-mode t)
  '(global-column-enforce-mode t)
  '(global-linum-mode t)
@@ -58,6 +60,9 @@
  '(ispell-silently-savep t)
  '(linum-relative-current-symbol "")
  '(linum-relative-global-mode t)
+ '(lsp-display-inline-image nil)
+ '(lsp-ui-doc-enable nil)
+ '(lsp-ui-sideline-enable nil)
  '(neo-autorefresh nil)
  '(neo-hidden-regexp-list
    (quote

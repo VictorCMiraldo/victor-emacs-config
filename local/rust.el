@@ -41,10 +41,23 @@
   (define-key lsp-ui-mode-map [remap xref-find-references]
     #'lsp-ui-peek-find-references))
 
+;; The default Cargo Run window is read only, that's bad since I can't send
+;; any input.
+;;
+;; https://emacs.stackexchange.com/questions/51156/cargo-process-does-not-accept-user-input
+;;
+(defun rust-compile-send-input ()
+  "Read string from minibuffer and send it to the rust process of the current buffer."
+  (interactive)
+  (let ((input (read-from-minibuffer "Send input to rust process: "))
+        (proc (get-buffer-process "*Cargo Run*"))
+        (inhibit-read-only t))
+    (process-send-string proc (concat input "\n"))))
+
 (use-package cargo
   :hook (rust-mode . cargo-minor-mode)
-  :bind (:map cargo-minor-mode-map
-              ("C-c C-c C-y" . cargo-process-clippy))
+  :bind (:map cargo-minor-mode-map ("C-c C-c C-y" . cargo-process-clippy))
+  :bind (:map cargo-minor-mode-map ("C-c i"       . rust-compile-send-input))
   :config
   (defadvice cargo-process-clippy
       (around my-cargo-process-clippy activate)
@@ -60,9 +73,8 @@
             #'(lambda ()
                 ;; (aggressive-indent-mode 1)
                 ;; (electric-pair-mode 1)
-                (flycheck-mode 1)
-                (bind-key "C-c C-b" #'rust-compile rust-mode-map)
-                (bind-key "C-c C-t" #'rust-test rust-mode-map)
+                ;; (flycheck-mode 1)
+                (bind-key "C-?" #'lsp-ui-doc-show rust-mode-map)
                 (bind-key "M-n" #'flycheck-next-error rust-mode-map)
                 (bind-key "M-p" #'flycheck-previous-error rust-mode-map))))
 
