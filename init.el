@@ -7,8 +7,6 @@
 (setq package-list 
   '(auctex
     async
-    ; auto-complete
-    ; ac-haskell-process
     cargo
     company
     dash
@@ -78,7 +76,8 @@
 ;; Packages required by us are:
 (require 'org)
 (require 'neotree)
-(require 'auto-complete)
+(require 'company)
+;; (require 'auto-complete)
 (require 'goto-chg)
 (require 'linum-relative)
 (require 'undo-tree)
@@ -100,9 +99,35 @@
 ;; Unicode fonts startup
 (unicode-fonts-setup)
 
+;; * Helm Stuff
+
+;; Borrowed from running emacs-helm.sh
+;; (helm-mode 1)
+
+;; HACK: Apr 4th 2018
+;; helm projectlie is crashing complaining about
+;; string-empty-p being undefined... well, I'm hacking my way through.
+(defun string-empty-p (str)
+  (string= "" str))
+
+(define-key global-map [remap find-file] 'helm-projectile-find-file)
+(define-key global-map [remap occur] 'helm-occur)
+(define-key global-map [remap list-buffers] 'helm-buffers-list)
+(define-key global-map [remap dabbrev-expand] 'helm-dabbrev)
+(define-key global-map [remap execute-extended-command] 'helm-M-x)
+
 ;; * Projectile Stuff
 (projectile-mode)
 (helm-projectile-on)
+
+;; Company mode
+(global-company-mode)
+
+(eval-after-load 'company
+  '(progn
+     (define-key company-active-map (kbd "TAB") 'company-complete-common-or-cycle)
+     (define-key company-active-map [tab] 'company-complete-common-or-cycle)))
+
 
 ;; Evil mode with powerline
 (evil-mode 1)
@@ -190,28 +215,6 @@
 ;;   eletric-indent automatically indents
 ;;   after pressing enter.
 (when (fboundp 'electric-indent-mode) (electric-indent-mode -1))
-
-;; * Helm Stuff
-
-;; Borrowed from running emacs-helm.sh
-(helm-mode 1)
-
-;; HACK: Apr 4th 2018
-;; helm projectlie is crashing complaining about
-;; string-empty-p being undefined... well, I'm hacking my way through.
-(defun string-empty-p (str)
-  (string= "" str))
-
-(define-key global-map [remap find-file] 'helm-projectile-find-file)
-(define-key global-map [remap occur] 'helm-occur)
-(define-key global-map [remap list-buffers] 'helm-buffers-list)
-(define-key global-map [remap dabbrev-expand] 'helm-dabbrev)
-(define-key global-map [remap execute-extended-command] 'helm-M-x)
-;; (unless (boundp 'completion-in-region-function)
-;;   (define-key lisp-interaction-mode-map [remap completion-at-point] 'helm-lisp-completion-at-point)
-;;   (define-key emacs-lisp-mode-map       [remap completion-at-point] 'helm-lisp-completion-at-point))
-
-
 
 ;; ##########
 ;;

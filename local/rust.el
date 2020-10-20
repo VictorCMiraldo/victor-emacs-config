@@ -52,11 +52,6 @@
                                                 " --tests -- -D clippy::all")))
       ad-do-it)))
 
-(eval-after-load 'company
-  '(progn
-     (define-key company-active-map (kbd "TAB") 'company-complete-common-or-cycle)
-     (define-key company-active-map [tab] 'company-complete-common-or-cycle)))
-
 (use-package rust-mode
   :mode "\\.rs\\'"
   :hook (rust-mode . lsp)
