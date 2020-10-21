@@ -62,6 +62,7 @@
  '(linum-relative-global-mode t)
  '(lsp-display-inline-image nil)
  '(lsp-rust-analyzer-display-chaining-hints nil)
+ '(lsp-signature-render-documentation nil)
  '(lsp-ui-doc-enable nil)
  '(lsp-ui-imenu-enable nil)
  '(lsp-ui-peek-enable nil)
