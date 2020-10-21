@@ -74,9 +74,11 @@
                 ;; (aggressive-indent-mode 1)
                 ;; (electric-pair-mode 1)
                 ;; (flycheck-mode 1)
-                (bind-key "C-?" #'lsp-ui-doc-glance rust-mode-map)
-                (bind-key "M-n" #'flycheck-next-error rust-mode-map)
-                (bind-key "M-p" #'flycheck-previous-error rust-mode-map))))
+                (bind-key "C-c h"      #'lsp-ui-doc-glance rust-mode-map)
+                (bind-key "M-<right>"  #'lsp-ui-peek-find-definitions rust-mode-map)
+                (bind-key "M-<left>"   #'lsp-ui-peek-find-references rust-mode-map)
+                (bind-key "M-<down>"   #'flycheck-next-error rust-mode-map)
+                (bind-key "M-<up>"     #'flycheck-previous-error rust-mode-map))))
 
 (use-package flycheck-rust
   :config (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))

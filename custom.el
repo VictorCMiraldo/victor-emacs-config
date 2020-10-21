@@ -93,6 +93,7 @@
  '(reftex-file-extensions (quote (("tex" ".tex" ".ltx" ".lhs") ("bib" ".bib"))))
  '(reftex-include-file-commands (quote ("include" "input" "lhsinclude")))
  '(reftex-try-all-extensions t)
+ '(rust-format-on-save t)
  '(standard-indent 2)
  '(tab-always-indent (quote complete))
  '(tool-bar-mode nil)
