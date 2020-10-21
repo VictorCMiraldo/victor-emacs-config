@@ -1,34 +1,34 @@
 (require 'use-package)
 
-;; (use-package direnv
-;;   :demand t
-;;   :init
-;;   (defconst emacs-binary-path (directory-file-name
-;;                                (file-name-directory
-;;                                 (executable-find "emacsclient"))))
-;;   :config
-;;   (eval-after-load 'flycheck
-;;     '(setq flycheck-executable-find
-;;            (lambda (cmd)
-;;              (add-hook 'post-command-hook #'direnv--maybe-update-environment)
-;;              (direnv-update-environment default-directory)
-;;              (executable-find cmd))))
-;; 
-;;   (add-hook 'rust-mode-hook
-;;             (lambda ()
-;;               (add-hook 'post-command-hook #'direnv--maybe-update-environment)
-;;               (direnv-update-environment default-directory)))
-;; 
-;;   (defun patch-direnv-environment (&rest _args)
-;;     (setenv "PATH" (concat emacs-binary-path ":" (getenv "PATH")))
-;;     (setq exec-path (cons (file-name-as-directory emacs-binary-path)
-;;                           exec-path)))
-;; 
-;;   (advice-add 'direnv-update-directory-environment
-;;               :after #'patch-direnv-environment)
-;; 
-;;   (add-hook 'git-commit-mode-hook #'patch-direnv-environment)
-;;   (add-hook 'magit-status-mode-hook #'patch-direnv-environment))
+(use-package direnv
+  :demand t
+  :init
+  (defconst emacs-binary-path (directory-file-name
+                               (file-name-directory
+                                (executable-find "emacsclient"))))
+  :config
+  (eval-after-load 'flycheck
+    '(setq flycheck-executable-find
+           (lambda (cmd)
+             (add-hook 'post-command-hook #'direnv--maybe-update-environment)
+             (direnv-update-environment default-directory)
+             (executable-find cmd))))
+
+  (add-hook 'rust-mode-hook
+            (lambda ()
+              (add-hook 'post-command-hook #'direnv--maybe-update-environment)
+              (direnv-update-environment default-directory)))
+
+  (defun patch-direnv-environment (&rest _args)
+    (setenv "PATH" (concat emacs-binary-path ":" (getenv "PATH")))
+    (setq exec-path (cons (file-name-as-directory emacs-binary-path)
+                          exec-path)))
+
+  (advice-add 'direnv-update-directory-environment
+              :after #'patch-direnv-environment)
+
+  (add-hook 'git-commit-mode-hook #'patch-direnv-environment)
+  (add-hook 'magit-status-mode-hook #'patch-direnv-environment))
 
 (use-package lsp-mode
   :commands lsp)

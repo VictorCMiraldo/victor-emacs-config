@@ -61,7 +61,10 @@
  '(linum-relative-current-symbol "")
  '(linum-relative-global-mode t)
  '(lsp-display-inline-image nil)
+ '(lsp-rust-analyzer-display-chaining-hints nil)
  '(lsp-ui-doc-enable nil)
+ '(lsp-ui-imenu-enable nil)
+ '(lsp-ui-peek-enable nil)
  '(lsp-ui-sideline-enable nil)
  '(neo-autorefresh nil)
  '(neo-hidden-regexp-list
